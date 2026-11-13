@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Software | Oracle India</title>
+  </head>
+  <body>
+    <u><h2>Java</h2></u>
+    <p>
+      Oracle java is the #1 programming language and development platform. it
+      helps <br />
+      reduce costs, shorten development timeframes, drive innovation, and
+      improve<br />
+      application services. With millions of developers running more than 73
+      billion Java<br />
+      Virtual Machines worldwide, Java continues to be the development platform
+      of choice <br />
+      for enterprise and developers.<br />
+      <a href="https://www.jetbrains.com/idea/download/?section=windows"
+        ><button>Download Java</button></a
+      >
+    </p>
+
+    <h3>About Java</h3>
+    <p>
+      <img
+        src="https://thumb.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/960px-Java_programming_language_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+        alt="Java"
+        height="250px"
+        width="250px"
+      />
+      <br />
+
+      <mark
+        >Java is a popular, high-level, object-oriented programming language and
+        computing platform created by <u>James Gosling</u> at Sun Microsystems
+        in 1995.</mark
+      >
+      Now maintained by Oracle, it is built on the "Write Once, Run Anywhere"
+      (WORA) principle, allowing compiled Java code to run on any operating
+      system without needing to be rewritten.
+    </p>
+    <br />
+
+    <pre>
+<h3>How Java Works
+</h3>
+Java achieves cross-platform compatibility through a two-step execution model:
+• Compilation to Bytecode. Instead of compiling directly into machine-specific code, the Java compiler turns human-readable source code into an intermediate format called bytecode.
+• Java Virtual Machine (JVM). The JVM acts as a translator on the host device. It reads the bytecode and converts it into native machine instructions for Windows, macOS, Linux, or mobile processors.
+
+<h3>Key Features
+</h3>
+• Object-Oriented. Everything in Java is structured around classes and objects, making large codebases modular, reusable, and easier to maintain.
+• Automatic Memory Management. Java uses a built-in Garbage Collector to automatically track and free up unused memory, preventing many common crashes and memory leaks.
+• Strong Typing and Security. Variables must have declared data types, which catches errors early during compilation. The runtime environment also includes built-in security checks and bytecode verification.
+• Multithreading. Java natively supports running multiple tasks simultaneously within a single program, which is critical for high-traffic servers and responsive apps.
+• Rich Ecosystem. Developers have access to massive standard libraries and popular frameworks (like Spring) alongside free open-source distributions like OpenJDK.
+
+<h3>Common Uses</h3>
+
+Java powers billions of devices and is widely used across major industries:
+• Enterprise Backend Systems. Large banks, e-commerce platforms, and tech giants (such as Amazon, Netflix, and Uber) rely on Java for secure, scalable server-side applications.
+• Android App Development. Java served as the foundational language for Android apps and remains heavily used alongside Kotlin.
+• Cloud and Big Data. Cloud-native microservices and major data-processing tools (like Apache Hadoop and Kafka) are built largely on the Java ecosystem.
+• Desktop and Embedded Devices. Java runs on everything from desktop software and financial trading terminals to smart cards and Internet of Things (IoT) sensors.
+<i>(Note: Despite the similar name, Java is completely distinct from JavaScript, which is primarily used for interactive web browsers.)
+</i>
+<strong>What would you like to explore next about Java?
+</strong>
+• Getting started with installation and writing your first program
+• Core concepts like Object-Oriented Programming (OOP) or syntax basics
+• Career paths & frameworks such as Spring Boot or Android development</pre>
+
+    <h2>Structure of Java</h2>
+    <p>
+      A standard
+      <mark
+        >Java program is organized into a series of sequential sections,
+        starting with optional metadata and imports, followed by mandatory class
+        definitions and a main() method.</mark
+      >
+      Every Java application relies on at least one class to encapsulate code
+      and a specific entry point where the Java Virtual Machine (JVM) begins
+      execution.
+      <br />
+      <img
+        src="https://media.geeksforgeeks.org/wp-content/uploads/20251111162640511359/java_program_structure.webp"
+        alt="Strcture of Java"
+        height="250px"
+        width="250px"
+      />
+    </p>
+    <pre>
+<h3>Core Sections of a Java Program</h3>
+
+A complete Java source file (.java) typically follows this top-to-bottom order:
+• Documentation Section (Optional). Contains comments that describe the program's purpose, author, and version. The compiler ignores single-line (//), multi-line (/* ... */), and Javadoc (/** ... */) comments during execution.
+• Package Declaration (Optional). Defines the namespace or folder where the class resides using the package keyword. If used, this must be the very first executable statement in the file.
+• Import Statements (Optional). Brings in pre-built classes or entire libraries from other packages using the import keyword. These sit directly below the package declaration and above any class or interface definitions.
+• Interface Section (Optional). Acts as a blueprint containing constants and abstract method declarations. Interfaces help Java achieve abstraction and multiple inheritance.
+• Class Definition (Mandatory). Serves as the primary container for all variables, constructors, and methods. In Java, the public class name must match the exact name of the .java file.
+• Main Method (Mandatory for Execution). Acts as the starting point for the JVM using the exact signature public static void main(String[] args). Everything inside this block executes sequentially when the program runs.
+
+<h3></h3>
+
+Below is a practical example from GeeksforGeeks and Codecademy demonstrating how each structural block fits together in a single file named CalculatorExample.java:
+java
+/**
+ * 1. Documentation Section
+ * A simple program to add two numbers.
+ */
+
+// 2. Package Declaration
+package com.example.math;
+
+// 3. Import Statement
+import java.util.Scanner;
+
+// 4. Interface Section
+interface Operable {
+    void displayResult(int result);
+}
+
+// 5. Class Definition
+public class CalculatorExample implements Operable {
+
+    // Instance variable (Data member)
+    int baseValue = 10;
+
+    // User-defined method
+    public void displayResult(int result) {
+        System.out.println("Final Result: " + result);
+    }
+
+    // 6. Main Method (Program Entry Point)
+    public static void main(String[] args) {
+        // Creating an object of the class
+        CalculatorExample calc = new CalculatorExample();
+        
+        // Local variable and statement
+        int sum = calc.baseValue + 25;
+        
+        // Calling a method
+        calc.displayResult(sum);
+    }
+}
+
+
+<h3>Breakdown of the main() Signature
+</h3>
+Understanding the entry point is key to reading Java syntax, as detailed by IntelliMindz:
+• public. An access modifier allowing the JVM to invoke the method from outside the class.
+• static. Allows the JVM to run the method without creating an instance of the class first.
+• void. Indicates that the method does not return any value upon completion.
+• main. The predefined identifier name that the JVM looks for to launch the application.
+• String[] args. An array parameter that accepts command-line arguments passed when launching the program.
+</pre>
+  </body>
+</html>
